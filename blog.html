@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Somya Swaroop | Senior Mobile Engineer</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#cdbdff",
+                        "on-secondary-fixed-variant": "#652fe7",
+                        "outline": "#72757f",
+                        "surface-tint": "#81ecff",
+                        "tertiary-fixed": "#ffa273",
+                        "tertiary-container": "#ffa273",
+                        "tertiary-fixed-dim": "#ff8d50",
+                        "error": "#ff716c",
+                        "on-tertiary-fixed": "#3c1400",
+                        "on-background": "#e2e5f0",
+                        "on-secondary-container": "#ac93ff",
+                        "primary-fixed-dim": "#00d4ec",
+                        "tertiary-dim": "#ff7520",
+                        "on-primary": "#005762",
+                        "on-tertiary-fixed-variant": "#6e2b00",
+                        "surface-container-high": "#1c2026",
+                        "on-secondary": "#4800bf",
+                        "primary-dim": "#00d4ec",
+                        "on-primary-fixed": "#003840",
+                        "tertiary": "#ffb692",
+                        "surface": "#0c0e12",
+                        "surface-container-highest": "#22262e",
+                        "surface-dim": "#0c0e12",
+                        "surface-container": "#171a1f",
+                        "on-tertiary": "#6f2b00",
+                        "on-primary-container": "#004d57",
+                        "primary-container": "#00e3fd",
+                        "secondary-container": "#2b007a",
+                        "error-dim": "#c94947",
+                        "on-error-container": "#ff9993",
+                        "surface-container-low": "#111318",
+                        "outline-variant": "#444850",
+                        "surface-bright": "#282c35",
+                        "surface-container-lowest": "#000000",
+                        "on-surface-variant": "#a8abb5",
+                        "on-surface": "#e2e5f0",
+                        "primary-fixed": "#00e3fd",
+                        "on-primary-fixed-variant": "#005762",
+                        "on-error": "#490006",
+                        "secondary-dim": "#7e51ff",
+                        "primary": "#81ecff",
+                        "secondary-fixed": "#e8deff",
+                        "on-secondary-fixed": "#4700bd",
+                        "inverse-on-surface": "#53555a",
+                        "surface-variant": "#22262e",
+                        "secondary-fixed-dim": "#dacdff",
+                        "error-container": "#8a1a1e",
+                        "on-tertiary-container": "#602400",
+                        "inverse-primary": "#006976",
+                        "background": "#0c0e12",
+                        "inverse-surface": "#f9f9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0e12;
+            color: #e2e5f0;
+        }
+
+        .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .grid-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(68, 72, 80, 0.15) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 40px rgba(129, 236, 255, 0.08);
+        }
+
+        .asymmetric-shape {
+            clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background selection:bg-primary selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-xl shadow-[0_0_20px_rgba(0,229,255,0.1)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-black text-cyan-300 tracking-tighter font-headline">Somya Swaroop</div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-slate-400 hover:text-cyan-100 transition-colors font-headline font-bold tracking-tight"
+                    href="#experience">Experience</a>
+                <a class="text-slate-400 hover:text-cyan-100 transition-colors font-headline font-bold tracking-tight"
+                    href="#skills">Skills</a>
+                <a class="text-slate-400 hover:text-cyan-100 transition-colors font-headline font-bold tracking-tight"
+                    href="#education">Education</a>
+                <a class="text-slate-400 hover:text-cyan-100 transition-colors font-headline font-bold tracking-tight"
+                    href="#contact">Contact</a>
+            </div>
+            <button
+                class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-headline font-bold hover:scale-95 transition-all duration-300 shadow-[0_0_15px_rgba(0,227,253,0.3)]">Resume</button>
+        </div>
+    </nav>
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden grid-pattern"
+            id="home">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface-container-low/50 to-background">
+            </div>
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+                <div class="lg:col-span-8 space-y-6">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-label uppercase tracking-widest border border-outline-variant/20">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Available for Architecture
+                    </div>
+                    <h1 class="text-6xl md:text-8xl font-headline font-bold tracking-tighter text-white leading-[0.9]">
+                        SOMYA SWAROOP <br /> <span class="text-primary italic">NAIWAL</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-on-surface-variant font-body max-w-2xl leading-relaxed">
+                        Senior Mobile Engineer &amp; Flutter Architect crafting <span
+                            class="text-secondary font-semibold">high-performance ecosystems</span> with surgical
+                        precision and creative flair.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="bg-gradient-to-r from-primary to-primary-dim text-on-primary-container px-8 py-4 rounded-xl font-headline font-bold text-lg hover:scale-105 transition-transform shadow-[0_10px_30px_rgba(0,227,253,0.2)]">
+                            View Work
+                        </button>
+                        <button
+                            class="border border-outline-variant text-primary px-8 py-4 rounded-xl font-headline font-bold text-lg hover:bg-white/5 transition-colors">
+                            Technical Stack
+                        </button>
+                    </div>
+                </div>
+                <div class="lg:col-span-4 flex items-center justify-center">
+                    <div class="relative w-full aspect-square max-w-[400px]">
+                        <div class="absolute inset-0 bg-primary/20 blur-[100px] rounded-full"></div>
+                        <div
+                            class="relative z-10 w-full h-full rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container-highest p-4">
+                            <img class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-700"
+                                data-alt="Close-up of a modern smartphone showing a sophisticated mobile application interface with glowing cyan highlights in a dark environment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT2T0d-3aGuzf_5I2alFmP9Abxsge1dpT4PWbaHVqpkLPdEkSlS9WF73ZbcoJYAg6HQ2oM15QuIHFidYgfF9GStYTdXr6w5HFE7gQrC57EfHyANqsVSH0VQERinNIMiDWA0JI8go6KiLBDokoLi2UhAm5SI9p-lI9JPYBbGwxG0bfC3URRIyXnzn4EEqLBFI5kLBCt1AN7TIbtEdgZJ2wd7x4vSNIUT442-J8WQPSHfgNjU_QZVFemts_Zeiqjqo0zZceQiHalKCI" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section: Asymmetric Timeline -->
+        <section class="py-32 px-8 max-w-7xl mx-auto" id="experience">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-4">
+                <div class="space-y-4">
+                    <span class="text-secondary font-headline font-bold tracking-widest uppercase">The Journey</span>
+                    <h2 class="text-5xl font-headline font-bold text-white tracking-tight">Commercial Experience</h2>
+                </div>
+                <p class="text-on-surface-variant max-w-md text-right border-r-4 border-primary pr-6">
+                    Building robust, scalable mobile solutions for global clients across fintech, logistics, and social
+                    domains.
+                </p>
+            </div>
+            <div class="space-y-24 relative">
+                <!-- Softserv.in -->
+                <div class="group grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
+                    <div
+                        class="hidden md:block md:col-span-1 h-full w-[1px] bg-outline-variant/30 absolute left-4 top-0">
+                    </div>
+                    <div class="hidden md:block md:col-span-1 relative z-10">
+                        <div
+                            class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-primary group-hover:bg-primary transition-colors flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-[14px] text-primary group-hover:text-on-primary-container"
+                                data-icon="terminal">terminal</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 space-y-2">
+                        <h3 class="text-3xl font-headline font-bold text-white">Softserv.in</h3>
+                        <p class="text-primary font-bold">Software Engineer</p>
+                        <p class="text-label-sm text-outline font-label">2022 - Present</p>
+                    </div>
+                    <div
+                        class="md:col-span-7 bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 glow-hover transition-all duration-300">
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            Architected complex integrations including <span class="text-white font-medium">Google Maps
+                                SDK</span> for real-time logistics tracking and <span
+                                class="text-white font-medium">Bluetooth Low Energy (BLE)</span> for secure hardware
+                            communication.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">Flutter</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">BLE</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">Maps
+                                SDK</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">OAuth
+                                2.0</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dotsquares -->
+                <div class="group grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
+                    <div
+                        class="hidden md:block md:col-span-1 h-full w-[1px] bg-outline-variant/30 absolute left-4 top-0">
+                    </div>
+                    <div class="hidden md:block md:col-span-1 relative z-10">
+                        <div
+                            class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-secondary group-hover:bg-secondary transition-colors flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-[14px] text-secondary group-hover:text-on-secondary"
+                                data-icon="architecture">architecture</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 space-y-2">
+                        <h3 class="text-3xl font-headline font-bold text-white">Dotsquares</h3>
+                        <p class="text-secondary font-bold">Associate Programmer</p>
+                        <p class="text-label-sm text-outline font-label">2021 - 2022</p>
+                    </div>
+                    <div
+                        class="md:col-span-7 bg-surface-container p-8 rounded-2xl border border-outline-variant/10 glow-hover transition-all duration-300">
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            Spearheaded the migration to <span class="text-white font-medium">BLoC pattern</span> for
+                            state management across flagship projects. Focused on modular architecture and unit testing
+                            to achieve 99% crash-free sessions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">Dart</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">BLoC</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">Clean
+                                Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- PartyPal -->
+                <div class="group grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative">
+                    <div class="hidden md:block md:col-span-1 relative z-10">
+                        <div
+                            class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-tertiary group-hover:bg-tertiary transition-colors flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-[14px] text-tertiary group-hover:text-on-tertiary"
+                                data-icon="smartphone">smartphone</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 space-y-2">
+                        <h3 class="text-3xl font-headline font-bold text-white">PartyPal</h3>
+                        <p class="text-tertiary font-bold">Flutter Developer</p>
+                        <p class="text-label-sm text-outline font-label">Internship / Junior Role</p>
+                    </div>
+                    <div
+                        class="md:col-span-7 bg-surface-container-low p-8 rounded-2xl border border-outline-variant/10 glow-hover transition-all duration-300">
+                        <p class="text-on-surface-variant leading-relaxed mb-6">
+                            Developed core features for financial event planning applications, integrating complex
+                            payment gateways and focusing on <span class="text-white font-medium">A11y
+                                (Accessibility)</span> standards.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">FinTech</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">Firebase</span>
+                            <span
+                                class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-label">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section: Bento Grid -->
+        <section class="bg-surface-container-low py-32 px-8 overflow-hidden" id="skills">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2
+                        class="text-4xl md:text-6xl font-headline font-bold text-white tracking-tighter mb-4 text-center">
+                        Technical Arsenal</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto"></div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:auto-rows-[180px]">
+                    <!-- Main Stack -->
+                    <div
+                        class="col-span-2 row-span-2 bg-surface-container-highest border border-outline-variant/20 rounded-3xl p-8 flex flex-col justify-between group hover:border-primary transition-colors">
+                        <div class="flex justify-between items-start">
+                            <span class="material-symbols-outlined text-5xl text-primary" data-icon="flutter_dash"
+                                style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+                            <span class="text-primary font-headline font-bold tracking-widest text-sm">EXPERTISE</span>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-headline font-bold text-white mb-2">Flutter &amp; Dart</h4>
+                            <p class="text-on-surface-variant">Core ecosystem for high-fidelity cross-platform
+                                performance.</p>
+                        </div>
+                    </div>
+                    <!-- Native Knowledge -->
+                    <div
+                        class="col-span-2 bg-surface-variant/40 border border-outline-variant/10 rounded-3xl p-6 flex items-center gap-6 group hover:bg-surface-variant transition-colors">
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="material-symbols-outlined text-secondary text-3xl"
+                                data-icon="android">android</span>
+                            <span class="material-symbols-outlined text-secondary text-3xl" data-icon="apple">ios</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-headline font-bold text-white">Kotlin &amp; Swift</h4>
+                            <p class="text-sm text-on-surface-variant">Deep native bridge integration capabilities.</p>
+                        </div>
+                    </div>
+                    <!-- State Mgmt -->
+                    <div
+                        class="bg-surface-container-highest border border-outline-variant/10 rounded-3xl p-6 flex flex-col justify-center group hover:scale-105 transition-transform">
+                        <span class="material-symbols-outlined text-tertiary mb-3 text-3xl"
+                            data-icon="account_tree">account_tree</span>
+                        <h4 class="text-lg font-headline font-bold text-white">BLoC / Provider</h4>
+                        <p class="text-xs text-on-surface-variant">Predictable state orchestration.</p>
+                    </div>
+                    <!-- APIs -->
+                    <div
+                        class="bg-surface-container-highest border border-outline-variant/10 rounded-3xl p-6 flex flex-col justify-center group hover:scale-105 transition-transform">
+                        <span class="material-symbols-outlined text-primary mb-3 text-3xl" data-icon="api">api</span>
+                        <h4 class="text-lg font-headline font-bold text-white">REST &amp; GraphQL</h4>
+                        <p class="text-xs text-on-surface-variant">Efficient data streams.</p>
+                    </div>
+                    <!-- Architecture -->
+                    <div
+                        class="col-span-2 bg-gradient-to-br from-surface-container-highest to-surface-container-low border border-outline-variant/10 rounded-3xl p-6 flex justify-between items-center group">
+                        <div class="space-y-1">
+                            <h4 class="text-2xl font-headline font-bold text-white">Clean Architecture</h4>
+                            <p class="text-on-surface-variant">TDD, SOLID, and Modular Design.</p>
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-full border-4 border-dashed border-outline-variant group-hover:rotate-45 transition-transform duration-700 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-outline" data-icon="settings">settings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Education Section -->
+        <section class="py-32 px-8 max-w-7xl mx-auto" id="education">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <h2 class="text-5xl font-headline font-bold text-white mb-8 tracking-tight">Academic Foundations
+                    </h2>
+                    <div class="space-y-12">
+                        <div class="relative pl-8 border-l-2 border-primary-container">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-container shadow-[0_0_10px_rgba(0,227,253,0.5)]">
+                            </div>
+                            <h3 class="text-2xl font-headline font-bold text-white">Masters in Computer Applications
+                                (MCA)</h3>
+                            <p class="text-primary font-medium mb-2">Rajasthan Technical University (RTU), Kota</p>
+                            <p class="text-on-surface-variant text-sm">Advanced focus on Algorithms, Distributed
+                                Systems, and Advanced Mobile Computing architectures.</p>
+                        </div>
+                        <div class="relative pl-8 border-l-2 border-outline-variant">
+                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-outline-variant"></div>
+                            <h3 class="text-2xl font-headline font-bold text-white">Bachelors in Computer Applications
+                                (BCA)</h3>
+                            <p class="text-secondary font-medium mb-2">Rajasthan University</p>
+                            <p class="text-on-surface-variant text-sm">Foundation in Software Engineering principles,
+                                Database Management, and UI Design basics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-surface-container-high rounded-3xl p-4 overflow-hidden relative group">
+                    <img class="w-full aspect-[4/3] object-cover rounded-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                        data-alt="A futuristic minimalist university library with students working on laptops amidst glowing digital screens and geometric architecture"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNNYqWkBsvUURtsnVUIfFAJAA4O3pbO7LfFn1PtjUi_cMNtRi9wJJ3z1oos3si2gGC8lD_7hUZ-FS42Fi9XHCW7LljaJGyJ6hqmxqismn5YpYPqQEDmzCYXt1kBlle57-ENHEa8O-QjOYZhF9l-PrjXsi9aFKihhXD7_2f7t3pysz-1EIIPqjGAjFHJP7dpyGCFdsRbsIZ6cbGDx8lzWdFCm3iH662GOhAMRKPkzDIRVJcPG2MOZH7vbrI_z0YQtot6MYfKTJFsUQ" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-high to-transparent"></div>
+                    <div class="absolute bottom-12 left-12">
+                        <span class="text-primary font-headline font-bold text-4xl">Continuous Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="py-32 px-8 bg-surface-container-lowest" id="contact">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <h2 class="text-5xl md:text-7xl font-headline font-bold text-white tracking-tighter">Ready to build the
+                    <span class="text-primary">next big thing?</span></h2>
+                <p class="text-on-surface-variant text-xl font-body max-w-2xl mx-auto">
+                    Currently open to senior opportunities or architectural consultations. Let's engineer something
+                    extraordinary.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6 pt-10">
+                    <a class="inline-flex items-center gap-3 bg-white text-black px-10 py-5 rounded-full font-headline font-bold text-lg hover:bg-primary transition-colors"
+                        href="mailto:contact@somya.dev">
+                        <span class="material-symbols-outlined" data-icon="mail">mail</span> Send an Email
+                    </a>
+                    <a class="inline-flex items-center gap-3 border border-outline-variant text-white px-10 py-5 rounded-full font-headline font-bold text-lg hover:border-primary transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined" data-icon="send">send</span> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-950 w-full py-12 px-8 border-t border-outline-variant/10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+            <div class="text-lg font-bold text-cyan-300 font-headline">Somya Swaroop</div>
+            <div class="text-slate-500 font-['Inter'] text-sm tracking-wide">© 2024 Somya Swaroop • Engineered with
+                Flutter</div>
+            <div class="flex gap-8">
+                <a class="text-slate-500 hover:text-cyan-300 transition-all font-['Inter'] text-sm tracking-wide"
+                    href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-all font-['Inter'] text-sm tracking-wide"
+                    href="#">GitHub</a>
+                <a class="text-slate-500 hover:text-cyan-300 transition-all font-['Inter'] text-sm tracking-wide"
+                    href="#">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
